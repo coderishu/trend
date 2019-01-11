@@ -1,0 +1,14 @@
+<mat-toolbar style="position:relative">
+ <div class="rental">Rental Management System</div>
+</mat-toolbar>
+
+<mat-form-field style="position:absolute;">
+  <mat-select placeholder="Location">
+    <mat-option *ngFor="let loc of dataArray;let i=index;" (click)="branch(loc.branches.name)">
+      {{loc.name}}
+      <ng-container *ngFor="let loc1 of loc.branches">
+
+      </ng-container>
+    </mat-option>
+  </mat-select>
+</mat-form-field>
